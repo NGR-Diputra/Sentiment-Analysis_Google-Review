@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #3498db;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            {% if result == 'Positive' %}
+                color: #27ae60;  /* Green for Positive sentiment */
+            {% elif result == 'Negative' %}
+                color: #e74c3c;  /* Red for Negative sentiment */
+            {% else %}
+                color: #333;  /* Default color */
+            {% endif %}
+        }
+    </style>
+</head>
+<body>
+    <h1>ANALISIS SENTIMEN</h1>
+    
+    <form action="/predict" method="post">
+        <label for="text">Silakan masukkan kalimat yang diinginkan :</label>
+        <textarea id="text" name="text" rows="4" cols="50" required></textarea>
+        <button type="submit">Cek Sentimen</button>
+    </form>
+
+    {% if result %}
+        <div class="result">
+            <p>Input : {{ text }}</p>
+            <p>Sentimen : {{ result }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>
