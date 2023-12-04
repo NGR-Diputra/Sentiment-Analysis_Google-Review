@@ -1,0 +1,16 @@
+{
+    "yang": ["yg"],
+    "masih": ["masi", "msh", "msi", "msih"],
+    "tidak": ["gak", "ngga", "nggak", "tdk", "ga", "ngak", "g"],
+    "jadi": ["jd", "jdi"],
+    "lagi": ["lg", "lgi"],
+    "kalau": ["kl", "klau", "klo", "klu"],
+    "bapak": ["bpk"],
+    "ibu": ["bu", "buk"],
+    "kartu keluarga": ["kk"],
+    "kartu tanda penduduk": ["ktp"],
+    "tinggal": ["tingal"],
+    "juga": ["jg", "jga", "jgaa"],
+    "mahasiswa": ["mhs"],
+    "suratsurat": ["surat-surat", "surat - surat"]
+}
